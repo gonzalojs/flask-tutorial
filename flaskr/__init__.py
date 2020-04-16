@@ -34,4 +34,7 @@ def create_app(test_config=None):
     def main():
         return 'Soy La Página Principal!!'
 
+    from . import db
+    db.init_app(app)
+
     return app
